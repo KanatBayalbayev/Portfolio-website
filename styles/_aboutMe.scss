@@ -1,0 +1,178 @@
+.aboutMePage {
+  border-top: 6px solid rgb(178, 12, 178);
+  background-image: linear-gradient(
+    to right top,
+    #0c105c,
+    #0a1660,
+    #091b64,
+    #082067,
+    #07256b,
+    #1c2c79,
+    #2d3286,
+    #3d3994,
+    #6340ad,
+    #8c44c4,
+    #b743d7,
+    #e53ee6
+  );
+  width: 100vw;
+  height: 100vh;
+  color: white;
+
+  .headings {
+    font-family: cursive;
+    display: flex;
+    top: 50px;
+    left: 43%;
+    .aboutName {
+      font-family: cursive;
+      position: relative;
+      top: 50px;
+      left: 270px;
+      letter-spacing: 1px;
+    }
+    .skillsName {
+      font-family: cursive;
+      position: relative;
+      top: 50px;
+      left: 720px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .aboutMeSections {
+    display: flex;
+    margin-top: 100px;
+
+    .aboutMeContent {
+      position: absolute;
+      // border: 1px solid black;
+      width: 570px;
+      left: 50px;
+      text-align: justify;
+      line-height: 25px;
+      img {
+        width: 350px;
+        margin-top: -10px;
+        margin-left: 75px;
+      }
+    }
+
+    .skillsContent {
+      position: absolute;
+      width: 570px;
+      // border: 1px solid black;
+      left: 620px;
+
+      .skillIcon {
+        width: 100px;
+        position: relative;
+      }
+      .html {
+        left: 80px;
+        width: 114px;
+      }
+      .css {
+        left: 160px;
+        // width: 113px;
+      }
+      .js {
+        top: 6px;
+        left: 200px;
+        width: 220px;
+      }
+      .mongo {
+        top: -20px;
+        left: 150px;
+        width: 220px;
+      }
+      .node {
+        top: 10px;
+        right: -50px;
+        width: 150px;
+      }
+      .typescript {
+        top: 150px;
+        right: 10px;
+        width: 120px;
+      }
+      .bootstrap {
+        top: 20px;
+        right: -90px;
+        width: 230px;
+      }
+    }
+  }
+
+  // max-width: 768px start
+  @media screen and (max-width: 768px) {
+    .headings {
+      .aboutName {
+        margin-left: -130px;
+      }
+      .skillsName {
+        margin-left: -200px;
+      }
+    }
+    .aboutMeSections {
+      .aboutMeContent {
+        margin-top: -30px;
+        width: 370px;
+        margin-left: -10px;
+        img {
+          width: 260px;
+          margin-top: -30px;
+          margin-right: -30px;
+        }
+      }
+      .skillsContent {
+        margin-top: -190px;
+        margin-left: -300px;
+
+        .html {
+          top: 170px;
+          left: 120px;
+          width: 90px;
+        }
+        .css {
+          width: 80px;
+          top: 170px;
+          left: 140px;
+          // width: 113px;
+        }
+        .js {
+          top: 176px;
+          left: 120px;
+          width: 180px;
+        }
+        .mongo {
+          top: 280px;
+          left: 150px;
+          width: 220px;
+        }
+        .node {
+          top: 300px;
+          right: 250px;
+          width: 150px;
+        }
+        .typescript {
+          top: 200px;
+          right: -70px;
+          width: 100px;
+        }
+        .sass {
+          display: none;
+          top: 170px;
+          right: 100px;
+          width: 120px;
+        }
+        .bootstrap {
+          display: none;
+          top: 150px;
+          right: -90px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}

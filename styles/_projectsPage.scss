@@ -1,0 +1,143 @@
+.projectsPage {
+  // display: none;
+  // border-top: 2px linear-gradient(
+  //   to right,
+  //   #2a0845,
+  //   #6441a5);
+  // background: #6441a5; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   #2a0845,
+  //   #6441a5
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   #2a0845,
+  //   #6441a5
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #2a0553,
+  //   #240752,
+  //   #1e0951,
+  //   #180b4f,
+  //   #100c4e,
+  //   #1c105a,
+  //   #281567,
+  //   #341973,
+  //   #581f8f,
+  //   #8022aa,
+  //   #ab20c3,
+  //   #d814d9
+  // );
+  background-image: linear-gradient(
+    to right top,
+    #0c105c,
+    #0a1660,
+    #091b64,
+    #082067,
+    #07256b,
+    #1c2c79,
+    #2d3286,
+    #3d3994,
+    #6340ad,
+    #8c44c4,
+    #b743d7,
+    #e53ee6
+  );
+
+  width: 100vw;
+  height: 150vh;
+  .main-heading {
+    // border: 1px solid black;
+    position: relative;
+    top: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .heading {
+      margin-top: 20px;
+      font-family: cursive;
+      color: white;
+    }
+    .projectsBtn {
+      margin-left: -60px;
+      // width: 700px;
+      button {
+        width: 130px;
+        margin-top: 30px;
+        margin-left: 70px;
+        padding: 10px;
+        transition: 0.25s;
+        font-weight: bold;
+        font-size: 17px;
+        transition: 0.5s;
+        border: 1px solid limegreen;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          box-shadow: inset 0 0 0 2em limegreen;
+          color: white;
+        }
+      }
+    }
+  }
+  .grid-container {
+    // border: 1px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 50px;
+    position: relative;
+    top: 70px;
+    .grid-item {
+      background-image: url("../imgs/clock.PNG");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 1px solid gray;
+      width: 320px;
+      height: 300px;
+      border-radius: 20px;
+      .details {
+        margin-top: 100px;
+        margin-left: 80px;
+        h3 {
+          margin-bottom: 25px;
+        }
+        button {
+          margin-left: -13px;
+          padding: 10px;
+          font-size: 18px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .javascriptProject {
+      display: none;
+    }
+    .reactProject {
+      display: none;
+    }
+    .activeProject {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      // border: 1px solid yellow;
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectsPage {
+    // background-color: black;
+    height: 245vh;
+  }
+}

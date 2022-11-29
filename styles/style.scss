@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "./homePage";
+@import "./aboutMe";
+@import "./timelinePage";
+@import "./projectsPage";
+@import "./contactFormPage";
+@import "./footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  .container {
+    // height: 100vh;
+    scroll-snap-type: y mandatory;
+    .section {
+      scroll-snap-align: center;
+    }
+  }
+}

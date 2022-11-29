@@ -1,0 +1,285 @@
+.timelinePage {
+  // border-bottom: 1px solid rgb(178, 12, 178);
+  display: none;
+  width: 100vw;
+  height: 130vh;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #0c105c,
+    #0a1660,
+    #091b64,
+    #082067,
+    #07256b,
+    #1c2c79,
+    #2d3286,
+    #3d3994,
+    #6340ad,
+    #8c44c4,
+    #b743d7,
+    #e53ee6
+  );
+  // padding: 50px 0;
+  .head {
+    display: flex;
+    font-size: 29px;
+    color: rgba(91, 14, 216, 0.767);
+    position: relative;
+    top: -40px;
+    font-weight: 500;
+    .education {
+      margin-right: 50px;
+      margin-top: 30px;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 17px;
+      transition: 0.5s;
+      border: 1px solid limegreen;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 0 2em limegreen;
+        color: white;
+      }
+    }
+    .jobExperience {
+      margin-top: 30px;
+      padding: 10px;
+      transition: 0.25s;
+      font-weight: bold;
+      font-size: 17px;
+      transition: 0.5s;
+      border: 1px solid limegreen;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 0 2em limegreen;
+        color: white;
+      }
+    }
+  }
+  .containerJob {
+    width: 70%;
+    height: auto;
+    margin: 10px 0;
+    position: relative;
+    ul {
+      list-style: none;
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        background-image: linear-gradient(
+          to bottom,
+          rgba(91, 14, 216, 0.767),
+          rgba(238, 12, 200, 0.747)
+        );
+      }
+      li {
+        width: 50%;
+        height: auto;
+        padding: 15px 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
+        position: relative;
+        margin-bottom: 30px;
+        z-index: 99;
+        &:nth-child(4) {
+          margin-bottom: 0;
+        }
+        .circle {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #e100ff7a;
+          top: 0;
+          display: grid;
+          place-items: center;
+          &::after {
+            content: " ";
+            width: 12px;
+            height: 12px;
+            background-color: #7f00ff;
+            border-radius: 50%;
+          }
+        }
+        &:nth-child(odd) .circle {
+          transform: translate(50%, -50%);
+          right: -30px;
+        }
+        &:nth-child(even) .circle {
+          transform: translate(-50%, -50%);
+          left: -30px;
+        }
+        .date {
+          position: absolute;
+          width: 230px;
+          height: 33px;
+          background-image: linear-gradient(to right, #7f00ff, #e100ff);
+          border-radius: 15px;
+          top: -45px;
+          display: grid;
+          place-items: center;
+          color: #fff;
+          font-size: 13px;
+          box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.318);
+        }
+        &:nth-child(odd) {
+          float: left;
+          clear: right;
+          text-align: right;
+          transform: translateX(-30px);
+          .date {
+            right: 20px;
+          }
+        }
+        &:nth-child(even) {
+          float: right;
+          clear: left;
+          transform: translateX(30px);
+        }
+        img {
+          width: 150px;
+        }
+        .jusan {
+          width: 200px;
+        }
+        .heading {
+          font-size: 17px;
+          color: rgb(91, 14, 216);
+          text-align: center;
+        }
+      }
+    }
+  }
+  // container-education start
+  .container-education {
+    width: 80%;
+    height: auto;
+    // position: relative;
+    top: -30px;
+    // margin: -10px 0;
+    position: relative;
+    ul {
+      list-style: none;
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        background-image: linear-gradient(
+          to bottom,
+          rgba(91, 14, 216, 0.767),
+          rgba(238, 12, 200, 0.747)
+        );
+      }
+      li {
+        width: 50%;
+        height: auto;
+        padding: 15px 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
+        position: relative;
+        margin-bottom: 30px;
+        z-index: 99;
+        p {
+          margin-bottom: 10px;
+        }
+        &:nth-child(2) {
+          margin-bottom: 0;
+        }
+        .circle-education {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #e100ff7a;
+          top: 0;
+          display: grid;
+          place-items: center;
+          &::after {
+            content: " ";
+            width: 12px;
+            height: 12px;
+            background-color: #7f00ff;
+            border-radius: 50%;
+          }
+        }
+        &:nth-child(odd) .circle-education {
+          transform: translate(50%, -50%);
+          right: -30px;
+        }
+        &:nth-child(even) .circle-education {
+          transform: translate(-50%, -50%);
+          left: -30px;
+        }
+        .date-education {
+          position: absolute;
+          width: 230px;
+          height: 33px;
+          background-image: linear-gradient(to right, #7f00ff, #e100ff);
+          border-radius: 15px;
+          top: -45px;
+          display: grid;
+          place-items: center;
+          color: #fff;
+          font-size: 13px;
+          box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.318);
+        }
+        &:nth-child(odd) {
+          float: left;
+          clear: right;
+          text-align: right;
+          transform: translateX(-30px);
+          .date-education {
+            right: 20px;
+          }
+        }
+        &:nth-child(even) {
+          float: right;
+          clear: left;
+          transform: translateX(30px);
+        }
+        img {
+          width: 150px;
+        }
+        .heading-education {
+          font-size: 17px;
+          color: rgb(91, 14, 216);
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .active {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .head {
+      position: absolute;
+      top: 1150px;
+      margin-left: 400px;
+      .education {
+        margin-left: 20px;
+      }
+    }
+    .containerJob {
+      margin-top: 70px;
+      margin-left: 10px;
+    }
+  }
+}

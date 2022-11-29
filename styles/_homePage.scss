@@ -1,0 +1,267 @@
+.homePage {
+  height: 100vh;
+  // background-color: white;
+  background-image: url("../imgs/backgroundHomePage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  //   Navbar
+  .navbar {
+    height: 70px;
+    // border: 1px solid black;
+    // background-color: black;
+    display: flex;
+    opacity: 0.7;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      position: absolute;
+      top: 22px;
+      left: 125px;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+    }
+    .links {
+      position: absolute;
+      top: 22px;
+      right: 70px;
+      display: flex;
+      // border: 1px solid black;
+      a:not(.contactBtn) {
+        color: #fff;
+        cursor: pointer;
+        // display: block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-left: 100px;
+        max-width: 160px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        // width: 100%;
+        &:hover,
+        &:active {
+          letter-spacing: 0px;
+        }
+        &:after,
+        &:before {
+          backface-visibility: hidden;
+          border: 1px solid rgba(#fff, 0);
+          bottom: 0px;
+          content: " ";
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          transition: all 280ms ease-in-out;
+          width: 0;
+        }
+        &:hover:after,
+        &:hover:before {
+          backface-visibility: hidden;
+          border-color: #fff;
+          transition: width 350ms ease-in-out;
+          width: 70%;
+        }
+
+        &:hover:before {
+          bottom: auto;
+          top: 0;
+          width: 70%;
+        }
+      }
+      .contactBtn {
+        border: 1px solid gray;
+        padding: 10px;
+        margin-top: -10px;
+        margin-left: 50px;
+        text-transform: uppercase;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        transition: 0.5s;
+        &:hover,
+        &:focus {
+          box-shadow: inset 12.5em 0 0 0 white;
+          color: black;
+        }
+      }
+    }
+    .bars {
+      // display: none;
+      position: absolute;
+      right: 70px;
+      top: 25px;
+      color: white;
+      font-size: 25px;
+      display: none;
+      cursor: pointer;
+    }
+  }
+  //   Navbar end
+
+  // Mobile menu
+  .mobileNavbar {
+    z-index: 5;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    // background: rgb(16, 95, 145);
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(16, 95, 145, 1) 40%,
+    //   rgba(255, 0, 83, 1) 100%
+    // );
+    background-image: url('../imgs/backgroundHomePage.jpg');
+    background-size: cover;
+    .sections {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid yellow;
+      // width: 500px;
+      // height: 800px;
+      margin-top: 50px;
+      // margin-left: 42%;
+      a {
+        margin-bottom: 50px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+      .mobileLinks {
+        margin-left: -50px;
+        a {
+          margin-left: 50px;
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  .hideAndShowMeny {
+    display: none;
+  }
+
+  // Home page Content
+  .homePageContent {
+    z-index: 2;
+    display: flex;
+    background-color: white;
+
+    .welcome {
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      .greeting {
+        font-family: cursive;
+        margin-left: 70px;
+        border: 1px solid gray;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background: rgb(16, 95, 145);
+        background: linear-gradient(
+          90deg,
+          rgba(16, 95, 145, 1) 40%,
+          rgba(255, 0, 83, 1) 100%
+        );
+        opacity: 0.5;
+      }
+      .name {
+        font-family: cursive;
+        margin-top: 20px;
+        margin-left: 120px;
+        color: white;
+      }
+      .introducing {
+        font-family: cursive;
+        color: white;
+        margin-left: 50px;
+      }
+      h1 {
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      button {
+        margin-top: 20px;
+        margin-left: 170px;
+      }
+      .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 10px;
+        &:hover {
+          background-color: RoyalBlue;
+        }
+      }
+    }
+
+    .photo {
+      width: 500px;
+      position: absolute;
+      top: 120px;
+      right: 100px;
+      border-radius: 50px;
+    }
+  }
+  // Mobile version for HomePage and Navbar
+
+// max-width: 768px start
+  @media screen and  (max-width: 768px) {
+    .navbar {
+      .logo {
+        top: 27px;
+        left: 280px;
+      }
+      .links {
+        display: none;
+      }
+      .bars {
+        display: block;
+      }
+    }
+    .homePageContent {
+      .welcome {
+        // text-align: center;
+        width: 400px;
+        top: 120px;
+        left: -18px;
+        .name {
+          width: 300px;
+          margin-left: 140px;
+          margin-bottom: 20px;
+          margin-top: 40px;
+        }
+        .greeting {
+          width: 450px;
+        }
+        .introducing {
+          // border: 1px solid yellow;
+          width: 480px;
+          margin-left: 70px;
+        }
+        button {
+          margin-left: 190px;
+        }
+      }
+      .photo {
+        display: block;
+        top: 100px;
+        left: 400px;
+        width: 400px;
+      }
+    }
+  }
+  // max-width: 768px end
+  // Mobile version for HomePage and Navbar end
+}

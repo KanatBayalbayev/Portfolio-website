@@ -1,0 +1,194 @@
+.contactFormPage {
+  // display: none;
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+//   background: #360033;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-image: linear-gradient(to right bottom, #0c105c, #0a1660, #091b64, #082067, #07256b, #1c2c79, #2d3286, #3d3994, #6340ad, #8c44c4, #b743d7, #e53ee6);
+  .contact-box {
+    position: relative;
+    right: -200px;
+    z-index: 1;
+    max-width: 750px;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+    margin-top: -120px;
+    .left {
+      height: 100%;
+      width: 800px;
+      .links {
+        margin-top: -50px;
+        .link {
+          margin-left: 50px;
+          font-size: 50px;
+          cursor: pointer;
+          transition: all 0.4s;
+          color: purple;
+        }
+        .ws:hover {
+          color: rgb(5, 184, 5);
+        }
+        .in:hover {
+          color: rgb(211, 18, 50);
+        }
+        .li:hover {
+          color: rgb(49, 49, 246);
+        }
+      }
+      .mailTo {
+        margin-top: 50px;
+        margin-left: 40px;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+        }
+      }
+    }
+    .right {
+      padding: 25px 40px;
+      h2 {
+        position: relative;
+        padding: 0 0 10px;
+        margin-bottom: 10px;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          height: 4px;
+          width: 50px;
+          border-radius: 2px;
+          background-color: #2ecc71;
+        }
+        &:focus {
+          border: 2px solid rgba(30, 85, 250, 0.47);
+          background-color: #fff;
+        }
+      }
+      .field {
+        width: 100%;
+        border: 2px solid rgba(0, 0, 0, 0);
+        outline: none;
+        background-color: rgba(230, 230, 230, 0.6);
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+        transition: 0.3s;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+      textarea {
+        min-height: 150px;
+      }
+      .btn-toast {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background-color: #2ecc71;
+        color: #fff;
+        font-size: 1.1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background-color: #27ae60;
+        }
+      }
+    }
+  }
+
+  .toast {
+    opacity: 0;
+    z-index: 4;
+    // left: 100px;
+    margin-top: -350px;
+    position: relative;
+    width: 345px;
+    height: 140px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 10%);
+    padding: 15px 20px;
+    // transform: translateX(50px);
+    // transform: translateX(calc(100% + 50px));
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    .upside {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      span {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 4.5px;
+        color: #32cd32;
+      }
+      .squad {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          background-color: #fff;
+          border-radius: 8px;
+        }
+        i {
+          position: relative;
+          font-size: 50px;
+          color: #32cd32;
+        }
+      }
+    }
+    .message {
+      font-size: 18px;
+      color: #a6a6a6;
+      font-weight: 500;
+      display: block;
+      text-align: end;
+      letter-spacing: 1.2px;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 22px;
+      color: #a6a6a6;
+      cursor: pointer;
+      &:hover {
+        color: #000;
+      }
+    }
+
+  }
+  .showing {
+    // left: -650px;
+    // transform: translateX(0px);
+    opacity: 1;
+  }
+  @media screen and (max-width: 768px) {
+    .contact-box {
+      margin-left: -115px;
+    }
+    .left {
+      height: 200px;
+    }
+  }
+}
+
+
