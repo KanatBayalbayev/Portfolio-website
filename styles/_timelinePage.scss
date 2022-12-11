@@ -268,6 +268,18 @@
   .active {
     display: none;
   }
+  .jobandeducationContainer {
+    display: none;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .head {
+      display: flex;
+      position: relative;
+      top: -25px;
+      font-weight: 500;
+    }
+  }
   @media screen and (max-width: 768px) {
     .head {
       position: absolute;
@@ -280,6 +292,152 @@
     .containerJob {
       margin-top: 70px;
       margin-left: 10px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .head {
+      position: absolute;
+      top: 1060px;
+      margin-left: -10px;
+      .education {
+        margin-left: 20px;
+      }
+    }
+    .containerJob {
+      display: none;
+    }
+    .container-education {
+      display: none;
+    }
+    .jobandeducationContainer {
+      display: block;
+      margin-top: 30px;
+      margin-left: -110px;
+      .jobContainer {
+        display: none;
+        list-style: none;
+        li {
+          margin-top: 40px;
+          .dte {
+            background-color: greenyellow;
+            width: 300px;
+            height: 35px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 20px;
+          }
+          .desc {
+            background-color: white;
+            color: black;
+            width: 300px;
+            height: 55px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+          }
+          .dev {
+            padding: 20px;
+          }
+          .alfa1 {
+            display: flex;
+            flex-direction: row;
+            img {
+              position: absolute;
+              width: 120px;
+              left: 350px;
+              margin-top: -30px;
+            }
+          }
+          .alfa2 {
+            display: flex;
+            flex-direction: row;
+            img {
+              position: absolute;
+              width: 120px;
+              left: 350px;
+              margin-top: -30px;
+            }
+          }
+          .alfa3 {
+            display: flex;
+            flex-direction: row;
+            img {
+              position: absolute;
+              width: 150px;
+              height: 70px;
+              left: 335px;
+              margin-top: -30px;
+            }
+          }
+          .alfa4 {
+            display: flex;
+            flex-direction: row;
+            img {
+              position: absolute;
+              width: 120px;
+              left: 350px;
+              margin-top: -30px;
+            }
+          }
+        }
+      }
+      .educationContainer {
+        margin-top: -20px;
+        list-style: none;
+        margin-left: 130px;
+        .turan {
+          margin-bottom: 50px;
+          .dte {
+            background-color: greenyellow;
+            width: 300px;
+            height: 35px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+          }
+          .desc {
+            background-color: white;
+            color: black;
+            width: 300px;
+            height: 55px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+          }
+          img {
+            width: 250px;
+            margin-bottom: 10px;
+          }
+        }
+        .german {
+          .dte {
+            background-color: greenyellow;
+            width: 300px;
+            height: 35px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+          }
+          .desc {
+            background-color: white;
+            color: black;
+            width: 300px;
+            height: 95px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+          }
+          img {
+            width: 250px;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 }

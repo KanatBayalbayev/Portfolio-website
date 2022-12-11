@@ -181,12 +181,23 @@ background-image: linear-gradient(to right bottom, #0c105c, #0a1660, #091b64, #0
     // transform: translateX(0px);
     opacity: 1;
   }
+
+  @media screen and (max-width: 1200px){
+    .contact-box{
+      margin-top: 150px;
+    }
+  }
   @media screen and (max-width: 768px) {
     .contact-box {
       margin-left: -115px;
     }
     .left {
       height: 200px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .contactFormPage{
+      height: 300px;
     }
   }
 }
